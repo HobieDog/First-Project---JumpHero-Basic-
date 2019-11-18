@@ -50,7 +50,7 @@ public class EnemyMove : MonoBehaviour
 
         //Recursive
         float nextThink = Random.Range(2f, 5f);
-        Invoke("Think", 5);
+        Invoke("Think", 5); //5 or nextThink
     }
 
     void Turn()
