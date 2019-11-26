@@ -13,17 +13,6 @@ public class PlayerMove : MonoBehaviour
     Animator anim;
     CapsuleCollider2D capsuleCollider;
 
-    //Mobile Key Var
-    int left_value;
-    int right_value;
-    int jump_value;
-    bool left_down;
-    bool right_down;
-    bool jump_down;
-    bool left_up;
-    bool right_up;
-    bool jump_up;
-
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -61,7 +50,6 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate()
     {
         //Move Speed
-        //PC
         float h = Input.GetAxisRaw("Horizontal");
         rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
 
